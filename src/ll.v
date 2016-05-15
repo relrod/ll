@@ -38,7 +38,7 @@ Inductive LConsequence : (list LProp) -> LProp -> Prop :=
 (* Structural rules *)
 | Identity : forall (A : LProp), 'A ⊢ A
 | Cut : forall (B C : LProp) (Γ Δ : Context),
-    (Γ ⊢ B) -> ((Δ, 'B) ⊢ C) -> (Γ, Δ ⊢ C)
+    (Γ ⊢ B) -> ((Δ, 'B) ⊢ C) -> ((Γ, Δ) ⊢ C)
 | Exchange : forall (A B C : LProp) (Γ Δ : Context),
     ((Γ, 'A, 'B, Δ) ⊢ C) -> ((Γ, 'B, 'A, Δ) ⊢ C)
 
