@@ -31,8 +31,14 @@ Definition Context : Set := list LProp.
  *
  * Note: These are defined as per Figure 15 of
  * http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.8671
- * which, notably, does not include the ! and ? exponential connectives.
+ * which, notably, does not include the ! exponential conjunction connective.
  * This is a future TODO.
+ *
+ * Note also that because this is an implementation of *intuitionistic* linear
+ * logic, we do not get the par connective, nor the "?" exponential disjunction
+ * connective.
+ * See http://llwiki.ens-lyon.fr/mediawiki/index.php/Intuitionistic_linear_logic
+ * for more information.
  *)
 Inductive LConsequence : (list LProp) -> LProp -> Prop :=
 (* Structural rules *)
